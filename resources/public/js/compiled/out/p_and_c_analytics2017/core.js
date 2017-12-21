@@ -7,6 +7,7 @@ goog.require('p_and_c_analytics2017.events');
 goog.require('p_and_c_analytics2017.routes');
 goog.require('p_and_c_analytics2017.views');
 goog.require('p_and_c_analytics2017.config');
+goog.require('p_and_c_analytics2017.units');
 p_and_c_analytics2017.core.dev_setup = (function p_and_c_analytics2017$core$dev_setup(){
 if(p_and_c_analytics2017.config.debug_QMARK_){
 cljs.core.enable_console_print_BANG_.call(null);
@@ -24,7 +25,7 @@ return reagent.core.render.call(null,new cljs.core.PersistentVector(null, 1, 5, 
 p_and_c_analytics2017.core.init = (function p_and_c_analytics2017$core$init(){
 p_and_c_analytics2017.routes.app_routes.call(null);
 
-re_frame.core.dispatch_sync.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("p-and-c-analytics2017.events","initialize-db","p-and-c-analytics2017.events/initialize-db",1057509074)], null));
+re_frame.core.dispatch_sync.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("p-and-c-analytics2017.events","initialize-db","p-and-c-analytics2017.events/initialize-db",1057509074),p_and_c_analytics2017.units.units_data], null));
 
 p_and_c_analytics2017.core.dev_setup.call(null);
 
@@ -32,4 +33,4 @@ return p_and_c_analytics2017.core.mount_root.call(null);
 });
 goog.exportSymbol('p_and_c_analytics2017.core.init', p_and_c_analytics2017.core.init);
 
-//# sourceMappingURL=core.js.map?rel=1513846753344
+//# sourceMappingURL=core.js.map?rel=1513855580400

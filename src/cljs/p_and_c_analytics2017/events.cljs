@@ -4,10 +4,16 @@
 
 (re-frame/reg-event-db
  ::initialize-db
- (fn  [_ _]
-   db/default-db))
+ (fn  [_ [_ units-data]]
+  (let [units (:units units-data)
+        all-dimensions (merge (into {} (comp (map (comp :u val))
+                                             (map #(vector % nil)))
+                                       units)
+                              (:fundamental-units units-data))]
+   (assoc db/default-db
+    :dimensions all-dimensions
+    :units units))))
 
-(re-frame/reg-event-db
- ::set-active-panel
+(::set-active-panel
  (fn [db [_ active-panel]]
    (assoc db :active-panel active-panel)))

@@ -1,8 +1,8 @@
 (ns p-and-c-analytics2017.views
   (:require [re-frame.core :as re-frame]
             [re-com.core :as re-com]
-            [p-and-c-analytics2017.subs :as subs]
-            ))
+            [p-and-c-analytics2017.subs :as subs]))
+
 
 
 ;; home
