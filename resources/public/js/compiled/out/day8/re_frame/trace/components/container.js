@@ -30,9 +30,9 @@ return mranderson047.re_frame.v0v10v2.re_frame.core.dispatch.call(null,new cljs.
 return (function (){
 return mranderson047.re_frame.v0v10v2.re_frame.core.dispatch_sync.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("global","launch-external","global/launch-external",821773827)], null));
 });})(selected_tab,panel_type,external_window_QMARK_,unloading_QMARK_))
-], null)], null))], null)], null),(function (){var G__59484 = cljs.core.deref.call(null,selected_tab);
-var G__59484__$1 = (((G__59484 instanceof cljs.core.Keyword))?G__59484.fqn:null);
-switch (G__59484__$1) {
+], null)], null))], null)], null),(function (){var G__44498 = cljs.core.deref.call(null,selected_tab);
+var G__44498__$1 = (((G__44498 instanceof cljs.core.Keyword))?G__44498.fqn:null);
+switch (G__44498__$1) {
 case "traces":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [day8.re_frame.trace.panels.traces.render_trace_panel,traces], null);
 
@@ -52,4 +52,4 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 })()], null);
 });
 
-//# sourceMappingURL=container.js.map?rel=1513855140645
+//# sourceMappingURL=container.js.map?rel=1513978689812

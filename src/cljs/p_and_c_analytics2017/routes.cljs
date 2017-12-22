@@ -5,8 +5,7 @@
             [goog.events :as gevents]
             [goog.history.EventType :as EventType]
             [re-frame.core :as re-frame]
-            [p-and-c-analytics2017.events :as events]
-            ))
+            [p-and-c-analytics2017.events :as events]))
 
 (defn hook-browser-navigation! []
   (doto (History.)
@@ -26,6 +25,8 @@
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
+  (defroute "/units" []
+    (re-frame/dispatch [::events/set-active-panel :units-panel]))
 
   ;; --------------------
   (hook-browser-navigation!))

@@ -35,8 +35,8 @@ return cljs_time.core.plus.call(null,date,cljs_time.core.days.call(null,n));
  * If date fails pred, subtract period until true, otherwise answer date
  */
 re_com.datepicker.previous = (function re_com$datepicker$previous(var_args){
-var G__63108 = arguments.length;
-switch (G__63108) {
+var G__48122 = arguments.length;
+switch (G__48122) {
 case 1:
 return re_com.datepicker.previous.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -68,12 +68,12 @@ while(true){
 if(cljs.core.truth_(pred.call(null,date))){
 return date;
 } else {
-var G__63110 = pred;
-var G__63111 = cljs_time.core.minus.call(null,date,period);
-var G__63112 = period;
-pred = G__63110;
-date = G__63111;
-period = G__63112;
+var G__48124 = pred;
+var G__48125 = cljs_time.core.minus.call(null,date,period);
+var G__48126 = period;
+pred = G__48124;
+date = G__48125;
+period = G__48126;
 continue;
 }
 break;
@@ -107,8 +107,8 @@ var c = cljs.core.count.call(null,coll);
 return cljs.core.take.call(null,c,cljs.core.drop.call(null,cljs.core.mod.call(null,n,c),cljs.core.cycle.call(null,coll)));
 });
 re_com.datepicker.is_day_pred = (function re_com$datepicker$is_day_pred(d){
-return (function (p1__63113_SHARP_){
-return cljs.core._EQ_.call(null,cljs_time.core.day_of_week.call(null,p1__63113_SHARP_),(d + (1)));
+return (function (p1__48127_SHARP_){
+return cljs.core._EQ_.call(null,cljs_time.core.day_of_week.call(null,p1__48127_SHARP_),(d + (1)));
 });
 });
 re_com.datepicker.main_div_with = (function re_com$datepicker$main_div_with(table_div,hide_border_QMARK_,class$,style,attr){
@@ -117,13 +117,13 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 /**
  * Answer 2 x rows showing month with nav buttons and days NOTE: not internationalized
  */
-re_com.datepicker.table_thead = (function re_com$datepicker$table_thead(display_month,p__63114){
-var map__63115 = p__63114;
-var map__63115__$1 = ((((!((map__63115 == null)))?((((map__63115.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63115.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63115):map__63115);
-var show_weeks_QMARK_ = cljs.core.get.call(null,map__63115__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
-var minimum = cljs.core.get.call(null,map__63115__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
-var maximum = cljs.core.get.call(null,map__63115__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
-var start_of_week = cljs.core.get.call(null,map__63115__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824));
+re_com.datepicker.table_thead = (function re_com$datepicker$table_thead(display_month,p__48128){
+var map__48129 = p__48128;
+var map__48129__$1 = ((((!((map__48129 == null)))?((((map__48129.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48129.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48129):map__48129);
+var show_weeks_QMARK_ = cljs.core.get.call(null,map__48129__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
+var minimum = cljs.core.get.call(null,map__48129__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
+var maximum = cljs.core.get.call(null,map__48129__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
+var start_of_week = cljs.core.get.call(null,map__48129__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824));
 var prev_date = re_com.datepicker.dec_month.call(null,cljs.core.deref.call(null,display_month));
 var minimum__$1 = re_com.util.deref_or_value.call(null,minimum);
 var maximum__$1 = re_com.util.deref_or_value.call(null,maximum);
@@ -131,7 +131,7 @@ var prev_enabled_QMARK_ = (cljs.core.truth_(minimum__$1)?cljs_time.core.after_QM
 var next_date = re_com.datepicker.inc_month.call(null,cljs.core.deref.call(null,display_month));
 var next_enabled_QMARK_ = (cljs.core.truth_(maximum__$1)?cljs_time.core.before_QMARK_.call(null,next_date,maximum__$1):true);
 var template_row = (cljs.core.truth_(show_weeks_QMARK_)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566)], null)], null):new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646)], null));
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),cljs.core.conj.call(null,template_row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["prev ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(prev_enabled_QMARK_)?"available selectable":"disabled"))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),cljs.core.conj.call(null,template_row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["prev ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(prev_enabled_QMARK_)?"available selectable":"disabled"))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
 return (function (event){
 if(cljs.core.truth_(prev_enabled_QMARK_)){
 cljs.core.reset_BANG_.call(null,display_month,prev_date);
@@ -139,8 +139,8 @@ cljs.core.reset_BANG_.call(null,display_month,prev_date);
 }
 
 return null;
-});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
-], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.zmdi.zmdi-chevron-left","i.zmdi.zmdi-chevron-left",-1877271880),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),"24px"], null)], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),"month",new cljs.core.Keyword(null,"col-span","col-span",-232603210),"5"], null),re_com.datepicker.month_label.call(null,cljs.core.deref.call(null,display_month))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["next ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(next_enabled_QMARK_)?"available selectable":"disabled"))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
+});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
+], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.zmdi.zmdi-chevron-left","i.zmdi.zmdi-chevron-left",-1877271880),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),"24px"], null)], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),"month",new cljs.core.Keyword(null,"col-span","col-span",-232603210),"5"], null),re_com.datepicker.month_label.call(null,cljs.core.deref.call(null,display_month))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"class","class",-2030961996),["next ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((cljs.core.truth_(next_enabled_QMARK_)?"available selectable":"disabled"))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"padding","padding",1660304693),"0px"], null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
 return (function (event){
 if(cljs.core.truth_(next_enabled_QMARK_)){
 cljs.core.reset_BANG_.call(null,display_month,next_date);
@@ -148,28 +148,28 @@ cljs.core.reset_BANG_.call(null,display_month,next_date);
 }
 
 return null;
-});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
-], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.zmdi.zmdi-chevron-right","i.zmdi.zmdi-chevron-right",1358259812),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),"24px"], null)], null)], null)], null)),cljs.core.conj.call(null,template_row,(function (){var iter__28003__auto__ = ((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
-return (function re_com$datepicker$table_thead_$_iter__63117(s__63118){
-return (new cljs.core.LazySeq(null,((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
+});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
+], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.zmdi.zmdi-chevron-right","i.zmdi.zmdi-chevron-right",1358259812),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"font-size","font-size",-1847940346),"24px"], null)], null)], null)], null)),cljs.core.conj.call(null,template_row,(function (){var iter__28003__auto__ = ((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
+return (function re_com$datepicker$table_thead_$_iter__48131(s__48132){
+return (new cljs.core.LazySeq(null,((function (prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week){
 return (function (){
-var s__63118__$1 = s__63118;
+var s__48132__$1 = s__48132;
 while(true){
-var temp__4657__auto__ = cljs.core.seq.call(null,s__63118__$1);
+var temp__4657__auto__ = cljs.core.seq.call(null,s__48132__$1);
 if(temp__4657__auto__){
-var s__63118__$2 = temp__4657__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__63118__$2)){
-var c__28001__auto__ = cljs.core.chunk_first.call(null,s__63118__$2);
+var s__48132__$2 = temp__4657__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__48132__$2)){
+var c__28001__auto__ = cljs.core.chunk_first.call(null,s__48132__$2);
 var size__28002__auto__ = cljs.core.count.call(null,c__28001__auto__);
-var b__63120 = cljs.core.chunk_buffer.call(null,size__28002__auto__);
-if((function (){var i__63119 = (0);
+var b__48134 = cljs.core.chunk_buffer.call(null,size__28002__auto__);
+if((function (){var i__48133 = (0);
 while(true){
-if((i__63119 < size__28002__auto__)){
-var day = cljs.core._nth.call(null,c__28001__auto__,i__63119);
-cljs.core.chunk_append.call(null,b__63120,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))].join('')], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
+if((i__48133 < size__28002__auto__)){
+var day = cljs.core._nth.call(null,c__28001__auto__,i__48133);
+cljs.core.chunk_append.call(null,b__48134,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))].join('')], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)));
 
-var G__63121 = (i__63119 + (1));
-i__63119 = G__63121;
+var G__48135 = (i__48133 + (1));
+i__48133 = G__48135;
 continue;
 } else {
 return true;
@@ -177,22 +177,22 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__63120),re_com$datepicker$table_thead_$_iter__63117.call(null,cljs.core.chunk_rest.call(null,s__63118__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__48134),re_com$datepicker$table_thead_$_iter__48131.call(null,cljs.core.chunk_rest.call(null,s__48132__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__63120),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__48134),null);
 }
 } else {
-var day = cljs.core.first.call(null,s__63118__$2);
-return cljs.core.cons.call(null,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))].join('')], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),re_com$datepicker$table_thead_$_iter__63117.call(null,cljs.core.rest.call(null,s__63118__$2)));
+var day = cljs.core.first.call(null,s__48132__$2);
+return cljs.core.cons.call(null,cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"day-enabled"], null),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(day))].join('')], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),new cljs.core.Keyword(null,"key","key",-1516042587).cljs$core$IFn$_invoke$arity$1(day)], null)),re_com$datepicker$table_thead_$_iter__48131.call(null,cljs.core.rest.call(null,s__48132__$2)));
 }
 } else {
 return null;
 }
 break;
 }
-});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
+});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
 ,null,null));
-});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__63115,map__63115__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
+});})(prev_date,minimum__$1,maximum__$1,prev_enabled_QMARK_,next_date,next_enabled_QMARK_,template_row,map__48129,map__48129__$1,show_weeks_QMARK_,minimum,maximum,start_of_week))
 ;
 return iter__28003__auto__.call(null,re_com.datepicker.rotate.call(null,start_of_week,re_com.datepicker.days_vector));
 })())], null);
@@ -200,12 +200,12 @@ return iter__28003__auto__.call(null,re_com.datepicker.rotate.call(null,start_of
 re_com.datepicker.selection_changed = (function re_com$datepicker$selection_changed(selection,change_callback){
 return change_callback.call(null,selection);
 });
-re_com.datepicker.table_td = (function re_com$datepicker$table_td(date,focus_month,selected,today,p__63122,disabled_QMARK_,on_change){
-var map__63123 = p__63122;
-var map__63123__$1 = ((((!((map__63123 == null)))?((((map__63123.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63123.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63123):map__63123);
-var attributes = map__63123__$1;
-var minimum = cljs.core.get.call(null,map__63123__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
-var maximum = cljs.core.get.call(null,map__63123__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
+re_com.datepicker.table_td = (function re_com$datepicker$table_td(date,focus_month,selected,today,p__48136,disabled_QMARK_,on_change){
+var map__48137 = p__48136;
+var map__48137__$1 = ((((!((map__48137 == null)))?((((map__48137.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48137.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48137):map__48137);
+var attributes = map__48137__$1;
+var minimum = cljs.core.get.call(null,map__48137__$1,new cljs.core.Keyword(null,"minimum","minimum",-1621006059));
+var maximum = cljs.core.get.call(null,map__48137__$1,new cljs.core.Keyword(null,"maximum","maximum",573880714));
 var minimum__$1 = re_com.util.deref_or_value.call(null,minimum);
 var maximum__$1 = re_com.util.deref_or_value.call(null,maximum);
 var enabled_min = (cljs.core.truth_(minimum__$1)?re_com.datepicker._GT__EQ_date.call(null,date,minimum__$1):true);
@@ -234,7 +234,7 @@ return and__27183__auto__;
 }
 })())?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(classes)," today"].join(''):classes
 ));
-var on_click = ((function (minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,map__63123,map__63123__$1,attributes,minimum,maximum){
+var on_click = ((function (minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,map__48137,map__48137__$1,attributes,minimum,maximum){
 return (function (){
 if(cljs.core.truth_((function (){var or__27195__auto__ = disabled_QMARK_;
 if(cljs.core.truth_(or__27195__auto__)){
@@ -247,14 +247,14 @@ return null;
 } else {
 return re_com.datepicker.selection_changed.call(null,date,on_change);
 }
-});})(minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,map__63123,map__63123__$1,attributes,minimum,maximum))
+});})(minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,map__48137,map__48137__$1,attributes,minimum,maximum))
 ;
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),classes__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,on_click,map__63123,map__63123__$1,attributes,minimum,maximum){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),classes__$1,new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,on_click,map__48137,map__48137__$1,attributes,minimum,maximum){
 return (function (event){
 on_click.call(null);
 
 return null;
-});})(minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,on_click,map__63123,map__63123__$1,attributes,minimum,maximum))
+});})(minimum__$1,maximum__$1,enabled_min,enabled_max,enabled_day,disabled_day_QMARK_,classes,classes__$1,on_click,map__48137,map__48137__$1,attributes,minimum,maximum))
 ], null),cljs_time.core.day.call(null,date)], null);
 });
 re_com.datepicker.week_td = (function re_com$datepicker$week_td(date){
@@ -266,14 +266,14 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 re_com.datepicker.table_tr = (function re_com$datepicker$table_tr(date,focus_month,selected,attributes,disabled_QMARK_,on_change){
 var table_row = (cljs.core.truth_(new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221).cljs$core$IFn$_invoke$arity$1(attributes))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),re_com.datepicker.week_td.call(null,date)], null):new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646)], null));
 var row_dates = cljs.core.map.call(null,((function (table_row){
-return (function (p1__63125_SHARP_){
-return re_com.datepicker.inc_date.call(null,date,p1__63125_SHARP_);
+return (function (p1__48139_SHARP_){
+return re_com.datepicker.inc_date.call(null,date,p1__48139_SHARP_);
 });})(table_row))
 ,cljs.core.range.call(null,(7)));
 var today = (cljs.core.truth_(new cljs.core.Keyword(null,"show-today?","show-today?",513056415).cljs$core$IFn$_invoke$arity$1(attributes))?new cljs.core.Keyword(null,"today","today",945271563).cljs$core$IFn$_invoke$arity$1(attributes):null);
 return cljs.core.into.call(null,table_row,cljs.core.map.call(null,((function (table_row,row_dates,today){
-return (function (p1__63126_SHARP_){
-return re_com.datepicker.table_td.call(null,p1__63126_SHARP_,focus_month,selected,today,attributes,disabled_QMARK_,on_change);
+return (function (p1__48140_SHARP_){
+return re_com.datepicker.table_td.call(null,p1__48140_SHARP_,focus_month,selected,today,attributes,disabled_QMARK_,on_change);
 });})(table_row,row_dates,today))
 ,row_dates));
 });
@@ -285,13 +285,13 @@ var start_of_week = new cljs.core.Keyword(null,"start-of-week","start-of-week",-
 var current_start = re_com.datepicker.previous.call(null,re_com.datepicker.is_day_pred.call(null,start_of_week),display_month);
 var focus_month = cljs_time.core.month.call(null,display_month);
 var row_start_dates = cljs.core.map.call(null,((function (start_of_week,current_start,focus_month){
-return (function (p1__63127_SHARP_){
-return re_com.datepicker.inc_date.call(null,current_start,((7) * p1__63127_SHARP_));
+return (function (p1__48141_SHARP_){
+return re_com.datepicker.inc_date.call(null,current_start,((7) * p1__48141_SHARP_));
 });})(start_of_week,current_start,focus_month))
 ,cljs.core.range.call(null,(6)));
 return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300)], null),cljs.core.map.call(null,((function (start_of_week,current_start,focus_month,row_start_dates){
-return (function (p1__63128_SHARP_){
-return re_com.datepicker.table_tr.call(null,p1__63128_SHARP_,focus_month,selected,attributes,disabled_QMARK_,on_change);
+return (function (p1__48142_SHARP_){
+return re_com.datepicker.table_tr.call(null,p1__48142_SHARP_,focus_month,selected,attributes,disabled_QMARK_,on_change);
 });})(start_of_week,current_start,focus_month,row_start_dates))
 ,row_start_dates));
 });
@@ -307,14 +307,14 @@ return cljs.core.merge.call(null,attributes,new cljs.core.PersistentArrayMap(nul
 re_com.datepicker.datepicker_args_desc = new cljs.core.PersistentVector(null, 13, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"model","model",331153215),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"goog.date.UtcDateTime | atom",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.goog_date_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"the selected date. If provided, should pass pred :selectable-fn"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"on-change","on-change",-732046149),new cljs.core.Keyword(null,"required","required",1807647006),true,new cljs.core.Keyword(null,"type","type",1174270348),"goog.date.UtcDateTime -> nil",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.fn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"called when a new selection is made"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean | atom",new cljs.core.Keyword(null,"description","description",-1428560544),"when true, the can't select dates but can navigate"], null),new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"selectable-fn","selectable-fn",-1997365738),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),"(fn [date] true)",new cljs.core.Keyword(null,"type","type",1174270348),"pred",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.fn_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"Predicate is passed a date. If it answers false, day will be shown disabled and can't be selected."], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean",new cljs.core.Keyword(null,"description","description",-1428560544),"when true, week numbers are shown to the left"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"show-today?","show-today?",513056415),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean",new cljs.core.Keyword(null,"description","description",-1428560544),"when true, today's date is highlighted"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"minimum","minimum",-1621006059),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"goog.date.UtcDateTime | atom",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.goog_date_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"no selection or navigation before this date"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"maximum","maximum",573880714),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"goog.date.UtcDateTime | atom",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.goog_date_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"no selection or navigation after this date"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),(6),new cljs.core.Keyword(null,"type","type",1174270348),"int",new cljs.core.Keyword(null,"description","description",-1428560544),"first day of week (Monday = 0 ... Sunday = 6)"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"hide-border?","hide-border?",1792698922),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),false,new cljs.core.Keyword(null,"type","type",1174270348),"boolean",new cljs.core.Keyword(null,"description","description",-1428560544),"when true, the border is not displayed"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),cljs.core.string_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"CSS class names, space separated"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"CSS style map",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.css_style_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),"CSS styles to add or override"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"attr","attr",-604132353),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"type","type",1174270348),"HTML attr map",new cljs.core.Keyword(null,"validate-fn","validate-fn",1430169944),re_com.validate.html_attr_QMARK_,new cljs.core.Keyword(null,"description","description",-1428560544),new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"HTML attributes, like ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":on-mouse-move"], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),"No ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":class"], null)," or ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"code","code",1586293142),":style"], null),"allowed"], null)], null)], null);
 re_com.datepicker.datepicker = (function re_com$datepicker$datepicker(var_args){
 var args__28371__auto__ = [];
-var len__28364__auto___63136 = arguments.length;
-var i__28365__auto___63137 = (0);
+var len__28364__auto___48150 = arguments.length;
+var i__28365__auto___48151 = (0);
 while(true){
-if((i__28365__auto___63137 < len__28364__auto___63136)){
-args__28371__auto__.push((arguments[i__28365__auto___63137]));
+if((i__28365__auto___48151 < len__28364__auto___48150)){
+args__28371__auto__.push((arguments[i__28365__auto___48151]));
 
-var G__63138 = (i__28365__auto___63137 + (1));
-i__28365__auto___63137 = G__63138;
+var G__48152 = (i__28365__auto___48151 + (1));
+i__28365__auto___48151 = G__48152;
 continue;
 } else {
 }
@@ -325,11 +325,11 @@ var argseq__28372__auto__ = ((((0) < args__28371__auto__.length))?(new cljs.core
 return re_com.datepicker.datepicker.cljs$core$IFn$_invoke$arity$variadic(argseq__28372__auto__);
 });
 
-re_com.datepicker.datepicker.cljs$core$IFn$_invoke$arity$variadic = (function (p__63130){
-var map__63131 = p__63130;
-var map__63131__$1 = ((((!((map__63131 == null)))?((((map__63131.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63131.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63131):map__63131);
-var args = map__63131__$1;
-var model = cljs.core.get.call(null,map__63131__$1,new cljs.core.Keyword(null,"model","model",331153215));
+re_com.datepicker.datepicker.cljs$core$IFn$_invoke$arity$variadic = (function (p__48144){
+var map__48145 = p__48144;
+var map__48145__$1 = ((((!((map__48145 == null)))?((((map__48145.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48145.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48145):map__48145);
+var args = map__48145__$1;
+var model = cljs.core.get.call(null,map__48145__$1,new cljs.core.Keyword(null,"model","model",331153215));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.datepicker.datepicker_args_desc),args,"datepicker")))){
 } else {
 throw (new Error("Assert failed: (validate-args-macro datepicker-args-desc args \"datepicker\")"));
@@ -344,20 +344,20 @@ return or__27195__auto__;
 return cljs_time.core.now.call(null);
 }
 })()));
-return ((function (external_model,internal_model,display_month,map__63131,map__63131__$1,args,model){
+return ((function (external_model,internal_model,display_month,map__48145,map__48145__$1,args,model){
 return (function() { 
-var re_com$datepicker$datepicker_component__delegate = function (p__63133){
-var map__63134 = p__63133;
-var map__63134__$1 = ((((!((map__63134 == null)))?((((map__63134.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63134.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63134):map__63134);
-var args__$1 = map__63134__$1;
-var model__$1 = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var on_change = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var disabled_QMARK_ = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var start_of_week = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824),(6));
-var hide_border_QMARK_ = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"hide-border?","hide-border?",1792698922));
-var class$ = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var style = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var attr = cljs.core.get.call(null,map__63134__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var re_com$datepicker$datepicker_component__delegate = function (p__48147){
+var map__48148 = p__48147;
+var map__48148__$1 = ((((!((map__48148 == null)))?((((map__48148.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48148.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48148):map__48148);
+var args__$1 = map__48148__$1;
+var model__$1 = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var on_change = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var disabled_QMARK_ = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var start_of_week = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"start-of-week","start-of-week",-1590603824),(6));
+var hide_border_QMARK_ = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"hide-border?","hide-border?",1792698922));
+var class$ = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var style = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var attr = cljs.core.get.call(null,map__48148__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.datepicker.datepicker_args_desc),args__$1,"datepicker")))){
 } else {
 throw (new Error("Assert failed: (validate-args-macro datepicker-args-desc args \"datepicker\")"));
@@ -384,29 +384,29 @@ return cljs_time.core.now.call(null);
 return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.datepicker.main_div_with,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"table-condensed"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.datepicker.table_thead,display_month,configuration], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.datepicker.table_tbody,cljs.core.deref.call(null,display_month),cljs.core.deref.call(null,internal_model),configuration,(((disabled_QMARK_ == null))?false:re_com.util.deref_or_value.call(null,disabled_QMARK_)),on_change], null)], null),hide_border_QMARK_,class$,style,attr], null);
 };
 var re_com$datepicker$datepicker_component = function (var_args){
-var p__63133 = null;
+var p__48147 = null;
 if (arguments.length > 0) {
-var G__63139__i = 0, G__63139__a = new Array(arguments.length -  0);
-while (G__63139__i < G__63139__a.length) {G__63139__a[G__63139__i] = arguments[G__63139__i + 0]; ++G__63139__i;}
-  p__63133 = new cljs.core.IndexedSeq(G__63139__a,0,null);
+var G__48153__i = 0, G__48153__a = new Array(arguments.length -  0);
+while (G__48153__i < G__48153__a.length) {G__48153__a[G__48153__i] = arguments[G__48153__i + 0]; ++G__48153__i;}
+  p__48147 = new cljs.core.IndexedSeq(G__48153__a,0,null);
 } 
-return re_com$datepicker$datepicker_component__delegate.call(this,p__63133);};
+return re_com$datepicker$datepicker_component__delegate.call(this,p__48147);};
 re_com$datepicker$datepicker_component.cljs$lang$maxFixedArity = 0;
-re_com$datepicker$datepicker_component.cljs$lang$applyTo = (function (arglist__63140){
-var p__63133 = cljs.core.seq(arglist__63140);
-return re_com$datepicker$datepicker_component__delegate(p__63133);
+re_com$datepicker$datepicker_component.cljs$lang$applyTo = (function (arglist__48154){
+var p__48147 = cljs.core.seq(arglist__48154);
+return re_com$datepicker$datepicker_component__delegate(p__48147);
 });
 re_com$datepicker$datepicker_component.cljs$core$IFn$_invoke$arity$variadic = re_com$datepicker$datepicker_component__delegate;
 return re_com$datepicker$datepicker_component;
 })()
 ;
-;})(external_model,internal_model,display_month,map__63131,map__63131__$1,args,model))
+;})(external_model,internal_model,display_month,map__48145,map__48145__$1,args,model))
 });
 
 re_com.datepicker.datepicker.cljs$lang$maxFixedArity = (0);
 
-re_com.datepicker.datepicker.cljs$lang$applyTo = (function (seq63129){
-return re_com.datepicker.datepicker.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq63129));
+re_com.datepicker.datepicker.cljs$lang$applyTo = (function (seq48143){
+return re_com.datepicker.datepicker.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq48143));
 });
 
 /**
@@ -422,14 +422,14 @@ return null;
 re_com.datepicker.datepicker_dropdown_args_desc = cljs.core.conj.call(null,re_com.datepicker.datepicker_args_desc,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),"yyyy MMM dd",new cljs.core.Keyword(null,"type","type",1174270348),"string",new cljs.core.Keyword(null,"description","description",-1428560544),"[datepicker-dropdown only] a represenatation of a date format. See cljs_time.format"], null),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"no-clip?","no-clip?",-188884951),new cljs.core.Keyword(null,"required","required",1807647006),false,new cljs.core.Keyword(null,"default","default",-1987822328),true,new cljs.core.Keyword(null,"type","type",1174270348),"boolean",new cljs.core.Keyword(null,"description","description",-1428560544),"[datepicker-dropdown only] when an anchor is in a scrolling region (e.g. scroller component), the popover can sometimes be clipped. When this parameter is true (which is the default), re-com will use a different CSS method to show the popover. This method is slightly inferior because the popover can't track the anchor if it is repositioned"], null));
 re_com.datepicker.datepicker_dropdown = (function re_com$datepicker$datepicker_dropdown(var_args){
 var args__28371__auto__ = [];
-var len__28364__auto___63148 = arguments.length;
-var i__28365__auto___63149 = (0);
+var len__28364__auto___48162 = arguments.length;
+var i__28365__auto___48163 = (0);
 while(true){
-if((i__28365__auto___63149 < len__28364__auto___63148)){
-args__28371__auto__.push((arguments[i__28365__auto___63149]));
+if((i__28365__auto___48163 < len__28364__auto___48162)){
+args__28371__auto__.push((arguments[i__28365__auto___48163]));
 
-var G__63150 = (i__28365__auto___63149 + (1));
-i__28365__auto___63149 = G__63150;
+var G__48164 = (i__28365__auto___48163 + (1));
+i__28365__auto___48163 = G__48164;
 continue;
 } else {
 }
@@ -440,34 +440,34 @@ var argseq__28372__auto__ = ((((0) < args__28371__auto__.length))?(new cljs.core
 return re_com.datepicker.datepicker_dropdown.cljs$core$IFn$_invoke$arity$variadic(argseq__28372__auto__);
 });
 
-re_com.datepicker.datepicker_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__63142){
-var map__63143 = p__63142;
-var map__63143__$1 = ((((!((map__63143 == null)))?((((map__63143.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63143.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63143):map__63143);
-var args = map__63143__$1;
+re_com.datepicker.datepicker_dropdown.cljs$core$IFn$_invoke$arity$variadic = (function (p__48156){
+var map__48157 = p__48156;
+var map__48157__$1 = ((((!((map__48157 == null)))?((((map__48157.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48157.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48157):map__48157);
+var args = map__48157__$1;
 if(cljs.core.truth_(((!(goog.DEBUG))?true:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.datepicker.datepicker_dropdown_args_desc),args,"datepicker-dropdown")))){
 } else {
 throw (new Error("Assert failed: (validate-args-macro datepicker-dropdown-args-desc args \"datepicker-dropdown\")"));
 }
 
 var shown_QMARK_ = reagent.core.atom.call(null,false);
-var cancel_popover = ((function (shown_QMARK_,map__63143,map__63143__$1,args){
+var cancel_popover = ((function (shown_QMARK_,map__48157,map__48157__$1,args){
 return (function (){
 return cljs.core.reset_BANG_.call(null,shown_QMARK_,false);
-});})(shown_QMARK_,map__63143,map__63143__$1,args))
+});})(shown_QMARK_,map__48157,map__48157__$1,args))
 ;
 var position = new cljs.core.Keyword(null,"below-left","below-left",1233934732);
-return ((function (shown_QMARK_,cancel_popover,position,map__63143,map__63143__$1,args){
+return ((function (shown_QMARK_,cancel_popover,position,map__48157,map__48157__$1,args){
 return (function() { 
-var G__63151__delegate = function (p__63145){
-var map__63146 = p__63145;
-var map__63146__$1 = ((((!((map__63146 == null)))?((((map__63146.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__63146.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__63146):map__63146);
-var passthrough_args = map__63146__$1;
-var model = cljs.core.get.call(null,map__63146__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var show_weeks_QMARK_ = cljs.core.get.call(null,map__63146__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
-var on_change = cljs.core.get.call(null,map__63146__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var format = cljs.core.get.call(null,map__63146__$1,new cljs.core.Keyword(null,"format","format",-1306924766));
-var no_clip_QMARK_ = cljs.core.get.call(null,map__63146__$1,new cljs.core.Keyword(null,"no-clip?","no-clip?",-188884951),true);
-var collapse_on_select = ((function (map__63146,map__63146__$1,passthrough_args,model,show_weeks_QMARK_,on_change,format,no_clip_QMARK_,shown_QMARK_,cancel_popover,position,map__63143,map__63143__$1,args){
+var G__48165__delegate = function (p__48159){
+var map__48160 = p__48159;
+var map__48160__$1 = ((((!((map__48160 == null)))?((((map__48160.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__48160.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__48160):map__48160);
+var passthrough_args = map__48160__$1;
+var model = cljs.core.get.call(null,map__48160__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var show_weeks_QMARK_ = cljs.core.get.call(null,map__48160__$1,new cljs.core.Keyword(null,"show-weeks?","show-weeks?",-1563135221));
+var on_change = cljs.core.get.call(null,map__48160__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var format = cljs.core.get.call(null,map__48160__$1,new cljs.core.Keyword(null,"format","format",-1306924766));
+var no_clip_QMARK_ = cljs.core.get.call(null,map__48160__$1,new cljs.core.Keyword(null,"no-clip?","no-clip?",-188884951),true);
+var collapse_on_select = ((function (map__48160,map__48160__$1,passthrough_args,model,show_weeks_QMARK_,on_change,format,no_clip_QMARK_,shown_QMARK_,cancel_popover,position,map__48157,map__48157__$1,args){
 return (function (new_model){
 cljs.core.reset_BANG_.call(null,shown_QMARK_,false);
 
@@ -476,37 +476,37 @@ return on_change.call(null,new_model);
 } else {
 return null;
 }
-});})(map__63146,map__63146__$1,passthrough_args,model,show_weeks_QMARK_,on_change,format,no_clip_QMARK_,shown_QMARK_,cancel_popover,position,map__63143,map__63143__$1,args))
+});})(map__48160,map__48160__$1,passthrough_args,model,show_weeks_QMARK_,on_change,format,no_clip_QMARK_,shown_QMARK_,cancel_popover,position,map__48157,map__48157__$1,args))
 ;
 var passthrough_args__$1 = cljs.core.dissoc.call(null,passthrough_args,new cljs.core.Keyword(null,"format","format",-1306924766),new cljs.core.Keyword(null,"no-clip?","no-clip?",-188884951));
 var passthrough_args__$2 = cljs.core.flatten.call(null,cljs.core.vec.call(null,cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"hide-border?","hide-border?",1792698922),true], null),cljs.core.assoc.call(null,passthrough_args__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149),collapse_on_select))));
 return new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.popover.popover_anchor_wrapper,new cljs.core.Keyword(null,"showing?","showing?",2094921488),shown_QMARK_,new cljs.core.Keyword(null,"position","position",-2011731912),position,new cljs.core.Keyword(null,"anchor","anchor",1549638489),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.datepicker.anchor_button,shown_QMARK_,model,format], null),new cljs.core.Keyword(null,"popover","popover",-1809582136),new cljs.core.PersistentVector(null, 17, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.popover.popover_content_wrapper,new cljs.core.Keyword(null,"position-offset","position-offset",1257061411),(cljs.core.truth_(show_weeks_QMARK_)?(43):(44)),new cljs.core.Keyword(null,"no-clip?","no-clip?",-188884951),no_clip_QMARK_,new cljs.core.Keyword(null,"arrow-length","arrow-length",934916707),(0),new cljs.core.Keyword(null,"arrow-width","arrow-width",1926673833),(0),new cljs.core.Keyword(null,"arrow-gap","arrow-gap",1490206257),(3),new cljs.core.Keyword(null,"padding","padding",1660304693),"0px",new cljs.core.Keyword(null,"on-cancel","on-cancel",-2071892932),cancel_popover,new cljs.core.Keyword(null,"body","body",-2049205669),cljs.core.into.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_com.datepicker.datepicker], null),passthrough_args__$2)], null)], null);
 };
-var G__63151 = function (var_args){
-var p__63145 = null;
+var G__48165 = function (var_args){
+var p__48159 = null;
 if (arguments.length > 0) {
-var G__63152__i = 0, G__63152__a = new Array(arguments.length -  0);
-while (G__63152__i < G__63152__a.length) {G__63152__a[G__63152__i] = arguments[G__63152__i + 0]; ++G__63152__i;}
-  p__63145 = new cljs.core.IndexedSeq(G__63152__a,0,null);
+var G__48166__i = 0, G__48166__a = new Array(arguments.length -  0);
+while (G__48166__i < G__48166__a.length) {G__48166__a[G__48166__i] = arguments[G__48166__i + 0]; ++G__48166__i;}
+  p__48159 = new cljs.core.IndexedSeq(G__48166__a,0,null);
 } 
-return G__63151__delegate.call(this,p__63145);};
-G__63151.cljs$lang$maxFixedArity = 0;
-G__63151.cljs$lang$applyTo = (function (arglist__63153){
-var p__63145 = cljs.core.seq(arglist__63153);
-return G__63151__delegate(p__63145);
+return G__48165__delegate.call(this,p__48159);};
+G__48165.cljs$lang$maxFixedArity = 0;
+G__48165.cljs$lang$applyTo = (function (arglist__48167){
+var p__48159 = cljs.core.seq(arglist__48167);
+return G__48165__delegate(p__48159);
 });
-G__63151.cljs$core$IFn$_invoke$arity$variadic = G__63151__delegate;
-return G__63151;
+G__48165.cljs$core$IFn$_invoke$arity$variadic = G__48165__delegate;
+return G__48165;
 })()
 ;
-;})(shown_QMARK_,cancel_popover,position,map__63143,map__63143__$1,args))
+;})(shown_QMARK_,cancel_popover,position,map__48157,map__48157__$1,args))
 });
 
 re_com.datepicker.datepicker_dropdown.cljs$lang$maxFixedArity = (0);
 
-re_com.datepicker.datepicker_dropdown.cljs$lang$applyTo = (function (seq63141){
-return re_com.datepicker.datepicker_dropdown.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq63141));
+re_com.datepicker.datepicker_dropdown.cljs$lang$applyTo = (function (seq48155){
+return re_com.datepicker.datepicker_dropdown.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq48155));
 });
 
 
-//# sourceMappingURL=datepicker.js.map?rel=1513855146548
+//# sourceMappingURL=datepicker.js.map?rel=1513978695198
