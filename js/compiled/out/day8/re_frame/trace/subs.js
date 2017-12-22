@@ -26,10 +26,10 @@ return cljs.core.get.call(null,app_db_settings,new cljs.core.Keyword(null,"searc
 mranderson047.re_frame.v0v10v2.re_frame.core.reg_sub.call(null,new cljs.core.Keyword("app-db","expansions","app-db/expansions",-1814314845),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("app-db","root","app-db/root",-1721368731)], null),(function (app_db_settings,_){
 return cljs.core.get.call(null,app_db_settings,new cljs.core.Keyword(null,"json-ml-expansions","json-ml-expansions",1112306261));
 }));
-mranderson047.re_frame.v0v10v2.re_frame.core.reg_sub.call(null,new cljs.core.Keyword("app-db","node-expanded?","app-db/node-expanded?",-1032853540),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("app-db","expansions","app-db/expansions",-1814314845)], null),(function (expansions,p__59555){
-var vec__59556 = p__59555;
-var _ = cljs.core.nth.call(null,vec__59556,(0),null);
-var path = cljs.core.nth.call(null,vec__59556,(1),null);
+mranderson047.re_frame.v0v10v2.re_frame.core.reg_sub.call(null,new cljs.core.Keyword("app-db","node-expanded?","app-db/node-expanded?",-1032853540),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("app-db","expansions","app-db/expansions",-1814314845)], null),(function (expansions,p__44569){
+var vec__44570 = p__44569;
+var _ = cljs.core.nth.call(null,vec__44570,(0),null);
+var path = cljs.core.nth.call(null,vec__44570,(1),null);
 return cljs.core.contains_QMARK_.call(null,expansions,path);
 }));
 mranderson047.re_frame.v0v10v2.re_frame.core.reg_sub.call(null,new cljs.core.Keyword("traces","filter-items","traces/filter-items",977390347),(function (db,_){
@@ -39,4 +39,4 @@ mranderson047.re_frame.v0v10v2.re_frame.core.reg_sub.call(null,new cljs.core.Key
 return cljs.core.get_in.call(null,db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"global","global",93595047),new cljs.core.Keyword(null,"unloading?","unloading?",621163286)], null));
 }));
 
-//# sourceMappingURL=subs.js.map?rel=1513855140790
+//# sourceMappingURL=subs.js.map?rel=1513978689964

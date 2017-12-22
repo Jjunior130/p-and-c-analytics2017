@@ -3,12 +3,21 @@
             [re-com.core :as re-com]
             [p-and-c-analytics2017.subs :as subs]))
 
+(defn units-panel []
+ (let [units (re-frame/subscribe [::subs/units])]
+  [re-com/v-box
+   :gap "1em"
+   :children (for [[name properties :as unit] @units]
+               ^{:key name}
+              [re-com/box
+               :child name])]))
+
 ;; home
 
 (defn home-title []
   (let [name (re-frame/subscribe [::subs/name])]
     [re-com/title
-     :label (str "Hello from " @name ". This is the Home Page.")
+     :label (str @name ". This is the Home Page.")
      :level :level1]))
 
 (defn link-to-about-page []
@@ -16,13 +25,17 @@
    :label "go to About Page"
    :href "#/about"])
 
+(defn link-to-units-page []
+ [re-com/hyperlink-href
+  :label "go to Units Page"
+  :href "#/units"])
+
 (defn home-panel []
- (let [units (re-frame/subscribe [::subs/units])]
-  [re-com/v-box
-   :gap "1em"
-   :children (for [[name properties :as unit] @units]
-               ^{:key (name)}
-               name)]))
+ [re-com/v-box
+  :gap "1em"
+  :children [[home-title]
+             [link-to-about-page]
+             [link-to-units-page]]])
 
 ;; about
 
@@ -47,6 +60,7 @@
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
+    :units-panel [units-panel]
     [:div]))
 
 (defn show-panel [panel-name]

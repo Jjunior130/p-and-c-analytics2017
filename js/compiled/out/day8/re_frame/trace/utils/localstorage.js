@@ -13,8 +13,8 @@ return ["day8.re-frame.trace.",cljs.core.str.cljs$core$IFn$_invoke$arity$1(key)]
  * Gets a re-frame-trace value from local storage.
  */
 day8.re_frame.trace.utils.localstorage.get = (function day8$re_frame$trace$utils$localstorage$get(var_args){
-var G__59254 = arguments.length;
-switch (G__59254) {
+var G__44231 = arguments.length;
+switch (G__44231) {
 case 1:
 return day8.re_frame.trace.utils.localstorage.get.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -51,4 +51,4 @@ day8.re_frame.trace.utils.localstorage.save_BANG_ = (function day8$re_frame$trac
 return day8.re_frame.trace.utils.localstorage.storage.set(day8.re_frame.trace.utils.localstorage.safe_key.call(null,key),cljs.core.pr_str.call(null,value));
 });
 
-//# sourceMappingURL=localstorage.js.map?rel=1513855139920
+//# sourceMappingURL=localstorage.js.map?rel=1513978689167
