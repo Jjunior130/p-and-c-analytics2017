@@ -68,3 +68,121 @@ notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_a
 [0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
 [32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.584 seconds.[0m
 notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.698 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\subs.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/p_and_c_analytics2017/views.cljs   line:51  column:13  ----[0m
+
+  [1mUse of undeclared Var p-and-c-analytics2017.views/units[0m
+
+  [36m47[0m  [36m;; main[0m
+  [36m48[0m  [36m[0m
+  [36m49[0m  [36m(defn- panels [panel-name][0m
+  [36m50[0m  [36m  (case panel-name[0m
+  [33m51[0m  [1m    :units [units][0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var p-and-c-analytics2017.views/units[0m
+  [36m52[0m  [36m    :home-panel [home-panel][0m
+  [36m53[0m  [36m    :about-panel [about-panel][0m
+  [36m54[0m  [36m    [:div]))[0m
+  [36m55[0m  [36m[0m
+  [36m56[0m  [36m(defn show-panel [panel-name][0m
+
+[36m----  Compiler Warning : Please see src/cljs/p_and_c_analytics2017/views.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.942 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.654 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[31mFailed to compile "resources/public/js/compiled/app.js" in 0.944 seconds.[0m
+[36m----  Could not Read  src/cljs/p_and_c_analytics2017/views.cljs   line:8 ----[0m
+
+  [1mD:\Programming\Projects\Clojure\p-and-c-analytics2017\src\cljs\p_and_c_analytics2017\views.cljs [line 8, col 11] Invalid symbol: re-com/.[0m
+
+  [36m 6[0m  [36m(defn units-collection [][0m
+  [36m 7[0m  [36m (let [units (re-frame/subscribe [::subs/units])][0m
+  [33m 8[0m  [1m  [re-com/]))[0m
+  [0m  [0m  [33m  D:\Programming\Projects\Clojure\p-and-c-analytics2017\src\cljs\p_and_c_analytics2017\views.cljs [line 8, col 11] Invalid symbol: re-com/.[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m;; home[0m
+
+[36m----  Reader Error : Please see src/cljs/p_and_c_analytics2017/views.cljs  ----[0m
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.633 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.505 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.567 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.554 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.509 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.748 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.589 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.526 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.529 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.591 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.497 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\events.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.616 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.587 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\db.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.544 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.553 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.494 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.556 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.564 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.503 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.512 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.626 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.55 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.626 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.561 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.4 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js
+[0mCompiling "resources/public/js/compiled/app.js" from ["src/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/app.js" in 2.599 seconds.[0m
+notifying browser that file changed:  resources\public\js\compiled\out\p_and_c_analytics2017\views.js

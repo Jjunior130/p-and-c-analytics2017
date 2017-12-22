@@ -3,8 +3,6 @@
             [re-com.core :as re-com]
             [p-and-c-analytics2017.subs :as subs]))
 
-
-
 ;; home
 
 (defn home-title []
@@ -19,10 +17,12 @@
    :href "#/about"])
 
 (defn home-panel []
+ (let [units (re-frame/subscribe [::subs/units])]
   [re-com/v-box
    :gap "1em"
-   :children [[home-title] [link-to-about-page]]])
-
+   :children (for [[name properties :as unit] @units]
+               ^{:key (name)}
+               name)]))
 
 ;; about
 
@@ -40,7 +40,6 @@
   [re-com/v-box
    :gap "1em"
    :children [[about-title] [link-to-home-page]]])
-
 
 ;; main
 

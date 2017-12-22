@@ -8,5 +8,8 @@ return new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invok
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("p-and-c-analytics2017.subs","active-panel","p-and-c-analytics2017.subs/active-panel",-947776158),(function (db,_){
 return new cljs.core.Keyword(null,"active-panel","active-panel",-1802545994).cljs$core$IFn$_invoke$arity$1(db);
 }));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("p-and-c-analytics2017.subs","units","p-and-c-analytics2017.subs/units",-1120045555),(function (db,_){
+return new cljs.core.Keyword(null,"units","units",-533089095).cljs$core$IFn$_invoke$arity$1(db);
+}));
 
-//# sourceMappingURL=subs.js.map?rel=1513855128915
+//# sourceMappingURL=subs.js.map?rel=1513920603787
