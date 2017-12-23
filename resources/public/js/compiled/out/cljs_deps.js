@@ -76,7 +76,7 @@ goog.addDependency("../re_com/splits.js", ['re_com.splits'], ['re_com.util', 're
 goog.addDependency("../re_com/modal_panel.js", ['re_com.modal_panel'], ['cljs.core', 're_com.validate']);
 goog.addDependency("../re_com/core.js", ['re_com.core'], ['re_com.popover', 're_com.text', 're_com.box', 'cljs.core', 're_com.typeahead', 're_com.tabs', 're_com.alert', 're_com.datepicker', 're_com.input_time', 're_com.buttons', 're_com.tour', 're_com.selection_list', 're_com.dropdown', 're_com.misc', 're_com.splits', 're_com.modal_panel']);
 goog.addDependency("../p_and_c_analytics2017/subs.js", ['p_and_c_analytics2017.subs'], ['cljs.core', 're_frame.core']);
-goog.addDependency("../p_and_c_analytics2017/views.js", ['p_and_c_analytics2017.views'], ['re_com.core', 'cljs.core', 'p_and_c_analytics2017.subs', 're_frame.core']);
+goog.addDependency("../p_and_c_analytics2017/views.js", ['p_and_c_analytics2017.views'], ['re_com.core', 'reagent.core', 'cljs.core', 'p_and_c_analytics2017.subs', 're_frame.core']);
 goog.addDependency("../p_and_c_analytics2017/config.js", ['p_and_c_analytics2017.config'], ['cljs.core']);
 goog.addDependency("../p_and_c_analytics2017/core.js", ['p_and_c_analytics2017.core'], ['reagent.core', 'cljs.core', 'p_and_c_analytics2017.events', 'p_and_c_analytics2017.routes', 'p_and_c_analytics2017.units', 'p_and_c_analytics2017.views', 're_frame.core', 'p_and_c_analytics2017.config']);
 goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);

@@ -15,3 +15,8 @@
  ::units
  (fn [db _]
    (:units db)))
+
+(re-frame/reg-sub
+ ::dimensions
+ (fn [db _]
+   (:dimensions db)))
