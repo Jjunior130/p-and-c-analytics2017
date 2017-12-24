@@ -9,36 +9,52 @@
        sbc (r/atom {:fn < :str "<"})]
   (fn [name grouped-units]
    [rc/v-box
-    :children (cons [rc/h-box
-                     :children [[rc/title
-                                 :label name
-                                 :level :level1]
-                                [rc/single-dropdown
-                                 :choices [{:id :name :label "Name"}
-                                           {:id :dimension :label "Dimension"}
-                                           {:id :ratio :label "Ratio"}]
-                                 :model sbi
-                                 :on-change (fn [id]
-                                             (reset! sbi id))]
-                                [rc/button
-                                 :label (:str @sbc)
-                                 :on-click (fn []
-                                            (swap! sbc (fn [{:keys [fn]}]
-                                                        (if (= > fn)
-                                                         {:fn < :str "<"}
-                                                         {:fn > :str ">"}))))]]]
+    :children
+    (cons
+     [rc/h-box
+      :justify :end
+      :children [[rc/title
+                  :label name
+                  :level :level1]
+                 [rc/box
+                  :child
+                  [rc/single-dropdown
+                   :choices [{:id :name :label "Name"}
+                             {:id :dimension :label "Dimension"}
+                             {:id :ratio :label "Ratio"}]
+                   :model sbi
+                   :on-change (fn [id]
+                               (reset! sbi id))]]
+                 [rc/button
+                  :label (:str @sbc)
+                  :on-click (fn []
+                             (swap! sbc (fn [{:keys [fn]}]
+                                         (if (= > fn)
+                                          {:fn < :str "<"}
+                                          {:fn > :str ">"}))))]]]
 
-                    (->> grouped-units
-                         (sort-by (fn [[name {:keys [u v]} :as unit]]
-                                   (case @sbi
-                                    :name name
-                                    :dimension u
-                                    :ratio v))
-                                  (:fn @sbc))
-                         (map (fn [[name properties :as unit]]
-                               ^{:key name}
-                               [rc/box
-                                :child (str unit)]))))])))
+     (->> grouped-units
+          (sort-by (fn [[name {:keys [u v]} :as unit]]
+                    (case @sbi
+                     :name name
+                     :dimension u
+                     :ratio v))
+                   (:fn @sbc))
+          (map (fn [[name {:keys [u v] :as properties} :as unit]]
+                ^{:key name}
+                [rc/v-box
+                 :children [[rc/box
+                             :child name
+                             :align :start]
+                            [rc/h-box
+                             :align :end
+                             :children [[rc/box
+                                         :align :start
+                                         :child (str u)] [rc/line]
+                                        [rc/box
+                                         :align :end
+                                         :child (str v)]]]]]))))])))
+
 
 (defn units-panel []
  (let [units (rf/subscribe [::subs/units])
@@ -51,13 +67,16 @@
     :children
     (cons
      [rc/h-box
-      :children [[rc/single-dropdown
-                  :choices [{:id :name :label "Name"}
-                            {:id :dimension :label "Dimension"}
-                            {:id :ratio :label "Ratio"}]
-                  :model grouped-by-input
-                  :on-change (fn [id]
-                              (reset! grouped-by-input id))]
+      :justify :end
+      :children [[rc/box
+                  :child
+                  [rc/single-dropdown
+                   :choices [{:id :name :label "Name"}
+                             {:id :dimension :label "Dimension"}
+                             {:id :ratio :label "Ratio"}]
+                   :model grouped-by-input
+                   :on-change (fn [id]
+                               (reset! grouped-by-input id))]]
                  [rc/button
                   :label (:str @sort-by-comp)
                   :on-click (fn []
