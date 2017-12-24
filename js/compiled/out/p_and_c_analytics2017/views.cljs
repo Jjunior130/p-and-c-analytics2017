@@ -1,37 +1,123 @@
 (ns p-and-c-analytics2017.views
-  (:require [re-frame.core :as re-frame]
-            [re-com.core :as re-com]
-            [p-and-c-analytics2017.subs :as subs]))
+  (:require [re-frame.core :as rf]
+            [re-com.core :as rc]
+            [p-and-c-analytics2017.subs :as subs]
+            [reagent.core :as r]))
+
+(defn units-grouping [name grouped-units]
+ (let [sbi (r/atom :name)
+       sbc (r/atom {:fn < :str "<"})]
+  (fn [name grouped-units]
+   [rc/v-box
+    :children
+    (cons
+     [rc/h-box
+      :justify :end
+      :children [[rc/title
+                  :label name
+                  :level :level1]
+                 [rc/box
+                  :child
+                  [rc/single-dropdown
+                   :choices [{:id :name :label "Name"}
+                             {:id :dimension :label "Dimension"}
+                             {:id :ratio :label "Ratio"}]
+                   :model sbi
+                   :on-change (fn [id]
+                               (reset! sbi id))]]
+                 [rc/button
+                  :label (:str @sbc)
+                  :on-click (fn []
+                             (swap! sbc (fn [{:keys [fn]}]
+                                         (if (= > fn)
+                                          {:fn < :str "<"}
+                                          {:fn > :str ">"}))))]]]
+
+     (->> grouped-units
+          (sort-by (fn [[name {:keys [u v]} :as unit]]
+                    (case @sbi
+                     :name name
+                     :dimension u
+                     :ratio v))
+                   (:fn @sbc))
+          (map (fn [[name {:keys [u v] :as properties} :as unit]]
+                ^{:key name}
+                [rc/v-box
+                 :children [[rc/box
+                             :child name
+                             :align :start]
+                            [rc/h-box
+                             :align :end
+                             :children [[rc/box
+                                         :align :start
+                                         :child (str u)] [rc/line]
+                                        [rc/box
+                                         :align :end
+                                         :child (str v)]]]]]))))])))
+
 
 (defn units-panel []
- (let [units (re-frame/subscribe [::subs/units])]
-  [re-com/v-box
-   :gap "1em"
-   :children (for [[name properties :as unit] @units]
-               ^{:key name}
-              [re-com/box
-               :child name])]))
+ (let [units (rf/subscribe [::subs/units])
+       dimensions (rf/subscribe [::subs/dimensions])
+       sort-by-comp (r/atom {:fn < :str "<"})
+       grouped-by-input (r/atom :dimension)]
+  (fn []
+   [rc/v-box
+    :gap "1em"
+    :children
+    (cons
+     [rc/h-box
+      :justify :end
+      :children [[rc/box
+                  :child
+                  [rc/single-dropdown
+                   :choices [{:id :name :label "Name"}
+                             {:id :dimension :label "Dimension"}
+                             {:id :ratio :label "Ratio"}]
+                   :model grouped-by-input
+                   :on-change (fn [id]
+                               (reset! grouped-by-input id))]]
+                 [rc/button
+                  :label (:str @sort-by-comp)
+                  :on-click (fn []
+                             (swap! sort-by-comp (fn [{:keys [fn]}]
+                                                  (if (= > fn)
+                                                   {:fn < :str "<"}
+                                                   {:fn > :str ">"}))))]]]
+     (->> @units
+          (group-by (fn [[name {:keys [u v] :as properties} :as unit]]
+                     (case @grouped-by-input
+                      :name (first name)
+                      :dimension u
+                      :ratio v)))
+          (sort-by (fn [[name grouped-units]]
+                    (or (@dimensions name) name))
+                   (:fn @sort-by-comp))
+          (map (fn [[name grouped-units :as grouping]]
+                ^{:key name}
+                [units-grouping (or (@dimensions name) name) grouped-units]))))])))
+
 
 ;; home
 
 (defn home-title []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [re-com/title
+  (let [name (rf/subscribe [::subs/name])]
+    [rc/title
      :label (str @name ". This is the Home Page.")
      :level :level1]))
 
 (defn link-to-about-page []
-  [re-com/hyperlink-href
+  [rc/hyperlink-href
    :label "go to About Page"
    :href "#/about"])
 
 (defn link-to-units-page []
- [re-com/hyperlink-href
+ [rc/hyperlink-href
   :label "go to Units Page"
   :href "#/units"])
 
 (defn home-panel []
- [re-com/v-box
+ [rc/v-box
   :gap "1em"
   :children [[home-title]
              [link-to-about-page]
@@ -40,17 +126,17 @@
 ;; about
 
 (defn about-title []
-  [re-com/title
+  [rc/title
    :label "This is the About Page."
    :level :level1])
 
 (defn link-to-home-page []
-  [re-com/hyperlink-href
+  [rc/hyperlink-href
    :label "go to Home Page"
    :href "#/"])
 
 (defn about-panel []
-  [re-com/v-box
+  [rc/v-box
    :gap "1em"
    :children [[about-title] [link-to-home-page]]])
 
@@ -67,7 +153,5 @@
   [panels panel-name])
 
 (defn main-panel []
-  (let [active-panel (re-frame/subscribe [::subs/active-panel])]
-    [re-com/v-box
-     :height "100%"
-     :children [[panels @active-panel]]]))
+  (let [active-panel (rf/subscribe [::subs/active-panel])]
+    [panels @active-panel]))
