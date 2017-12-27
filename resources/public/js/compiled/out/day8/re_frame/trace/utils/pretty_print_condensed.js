@@ -10,8 +10,8 @@ goog.require('clojure.string');
  *   Truncation is indicated by `…` at start/end, or `...` at middle, for readability. 
  */
 day8.re_frame.trace.utils.pretty_print_condensed.truncate_string = (function day8$re_frame$trace$utils$pretty_print_condensed$truncate_string(var_args){
-var G__42778 = arguments.length;
-switch (G__42778) {
+var G__42802 = arguments.length;
+switch (G__42802) {
 case 2:
 return day8.re_frame.trace.utils.pretty_print_condensed.truncate_string.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -33,9 +33,9 @@ return n.call(null,new cljs.core.Keyword(null,"end","end",-268185958),string);
 day8.re_frame.trace.utils.pretty_print_condensed.truncate_string.cljs$core$IFn$_invoke$arity$3 = (function (n,cut_from,string){
 var c = cljs.core.count.call(null,string);
 if((c > n)){
-var G__42779 = cut_from;
-var G__42779__$1 = (((G__42779 instanceof cljs.core.Keyword))?G__42779.fqn:null);
-switch (G__42779__$1) {
+var G__42803 = cut_from;
+var G__42803__$1 = (((G__42803 instanceof cljs.core.Keyword))?G__42803.fqn:null);
+switch (G__42803__$1) {
 case "start":
 return ["\u2026",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.subs.call(null,string,(c - (n - (1))),c))].join('');
 
@@ -45,8 +45,8 @@ return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.subs.call(null,str
 
 break;
 case "middle":
-var G__42780 = n;
-switch (G__42780) {
+var G__42804 = n;
+switch (G__42804) {
 case (1):
 return "\u2026";
 
@@ -62,11 +62,11 @@ break;
 default:
 var content_budget = (n - (2));
 var per_side_budget = Math.floor((content_budget / (2)));
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.subs.call(null,string,(0),(function (){var G__42781 = per_side_budget;
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.subs.call(null,string,(0),(function (){var G__42805 = per_side_budget;
 if(cljs.core.even_QMARK_.call(null,content_budget)){
-return (G__42781 - (1));
+return (G__42805 - (1));
 } else {
-return G__42781;
+return G__42805;
 }
 })())),"...",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.subs.call(null,string,(c - per_side_budget),c))].join('');
 
@@ -74,7 +74,7 @@ return G__42781;
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__42779__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__42803__$1)].join('')));
 
 }
 } else {
@@ -85,8 +85,8 @@ return string;
 day8.re_frame.trace.utils.pretty_print_condensed.truncate_string.cljs$lang$maxFixedArity = 3;
 
 day8.re_frame.trace.utils.pretty_print_condensed.truncate_segments = (function day8$re_frame$trace$utils$pretty_print_condensed$truncate_segments(var_args){
-var G__42786 = arguments.length;
-switch (G__42786) {
+var G__42810 = arguments.length;
+switch (G__42810) {
 case 2:
 return day8.re_frame.trace.utils.pretty_print_condensed.truncate_segments.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -114,14 +114,14 @@ var rep = clojure.string.replace.call(null,s,match,trunc_prefix);
 if(cljs.core._EQ_.call(null,rep,s)){
 return trunc_prefix;
 } else {
-var G__42788 = clojure.string.replace.call(null,s,match,trunc_prefix);
-var G__42789 = limit;
-var G__42790 = match;
-var G__42791 = trunc_prefix;
-s = G__42788;
-limit = G__42789;
-match = G__42790;
-trunc_prefix = G__42791;
+var G__42812 = clojure.string.replace.call(null,s,match,trunc_prefix);
+var G__42813 = limit;
+var G__42814 = match;
+var G__42815 = trunc_prefix;
+s = G__42812;
+limit = G__42813;
+match = G__42814;
+trunc_prefix = G__42815;
 continue;
 }
 }
@@ -142,11 +142,11 @@ var the_name = cljs.core.name.call(null,named);
 var kw_QMARK_ = (named instanceof cljs.core.Keyword);
 var ns_prefix_size = ((kw_QMARK_)?(3):(2));
 if(((cljs.core.count.call(null,the_name) > (cljs.core.truth_(the_ns)?(n - ns_prefix_size):n))) || ((the_ns == null))){
-var prefix = (function (){var G__42792 = ((kw_QMARK_)?":":"");
+var prefix = (function (){var G__42816 = ((kw_QMARK_)?":":"");
 if(cljs.core.truth_(the_ns)){
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__42792),"\u2026/"].join('');
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__42816),"\u2026/"].join('');
 } else {
-return G__42792;
+return G__42816;
 }
 })();
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(prefix),cljs.core.str.cljs$core$IFn$_invoke$arity$1(day8.re_frame.trace.utils.pretty_print_condensed.truncate_string.call(null,(n - cljs.core.count.call(null,prefix)),new cljs.core.Keyword(null,"start","start",-355208981),the_name))].join('');
@@ -208,17 +208,17 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
  * Wrap `value` with edges of `coll`
  */
 day8.re_frame.trace.utils.pretty_print_condensed.with_edges = (function day8$re_frame$trace$utils$pretty_print_condensed$with_edges(coll,value){
-var vec__42794 = day8.re_frame.trace.utils.pretty_print_condensed.edges.call(null,coll);
-var left = cljs.core.nth.call(null,vec__42794,(0),null);
-var right = cljs.core.nth.call(null,vec__42794,(1),null);
+var vec__42818 = day8.re_frame.trace.utils.pretty_print_condensed.edges.call(null,coll);
+var left = cljs.core.nth.call(null,vec__42818,(0),null);
+var right = cljs.core.nth.call(null,vec__42818,(1),null);
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(left),cljs.core.str.cljs$core$IFn$_invoke$arity$1(value),cljs.core.str.cljs$core$IFn$_invoke$arity$1(right)].join('');
 });
 /**
  * Render form in abbreviated form, showing content only for keywords/strings/symbols and entering collections to a depth of 1.
  */
 day8.re_frame.trace.utils.pretty_print_condensed.pretty_condensed = (function day8$re_frame$trace$utils$pretty_print_condensed$pretty_condensed(var_args){
-var G__42798 = arguments.length;
-switch (G__42798) {
+var G__42822 = arguments.length;
+switch (G__42822) {
 case 1:
 return day8.re_frame.trace.utils.pretty_print_condensed.pretty_condensed.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -245,11 +245,11 @@ if(typeof form === 'string'){
 return day8.re_frame.trace.utils.pretty_print_condensed.truncate_string.call(null,(16),new cljs.core.Keyword(null,"middle","middle",-701029031),form);
 } else {
 if(cljs.core.fn_QMARK_.call(null,form)){
-var or__27195__auto__ = (function (){var G__42801 = form.name;
-if((G__42801 == null)){
+var or__27195__auto__ = (function (){var G__42825 = form.name;
+if((G__42825 == null)){
 return null;
 } else {
-return clojure.string.replace.call(null,G__42801,/(^.*\$)(.*)/,"$2");
+return clojure.string.replace.call(null,G__42825,/(^.*\$)(.*)/,"$2");
 }
 })();
 if(cljs.core.truth_(or__27195__auto__)){
@@ -282,4 +282,4 @@ return day8.re_frame.trace.utils.pretty_print_condensed.with_edges.call(null,for
 day8.re_frame.trace.utils.pretty_print_condensed.pretty_condensed.cljs$lang$maxFixedArity = 4;
 
 
-//# sourceMappingURL=pretty_print_condensed.js.map?rel=1514003846949
+//# sourceMappingURL=pretty_print_condensed.js.map?rel=1514349648256

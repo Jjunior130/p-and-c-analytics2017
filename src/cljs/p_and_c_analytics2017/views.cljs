@@ -12,10 +12,20 @@
     :children
     (cons
      [rc/h-box
+      :align :center
       :justify :end
-      :children [[rc/title
-                  :label name
-                  :level :level1]
+      :children [[rc/box
+                  :size "2"
+                  :justify :center
+                  :child
+                  [rc/title
+                   :label name
+                   :level :level1]]
+                 [rc/box
+                  :size "1"
+                  :child
+                  ((comp str count)
+                   grouped-units)]
                  [rc/box
                   :child
                   [rc/single-dropdown
@@ -42,17 +52,16 @@
                    (:fn @sbc))
           (map (fn [[name {:keys [u v] :as properties} :as unit]]
                 ^{:key name}
-                [rc/v-box
+                [rc/h-box
                  :children [[rc/box
-                             :child name
-                             :align :start]
-                            [rc/h-box
-                             :align :end
+                             :margin "4em"
+                             :child name]
+                            [rc/v-box
+                             :justify :around
+                             :align :center
                              :children [[rc/box
-                                         :align :start
-                                         :child (str u)] [rc/line]
+                                         :child (str u)]
                                         [rc/box
-                                         :align :end
                                          :child (str v)]]]]]))))])))
 
 
@@ -64,11 +73,21 @@
   (fn []
    [rc/v-box
     :gap "1em"
+    :width "auto"
     :children
     (cons
      [rc/h-box
+      :align :center
       :justify :end
-      :children [[rc/box
+      :children [[rc/h-box
+                  :size "1"
+                  :children [[rc/box
+                              :padding "0 0.5em 0 0"
+                              :child
+                              "# of units:"]
+                             (count @units)]]
+                 [rc/box :child "Group by:"]
+                 [rc/box
                   :child
                   [rc/single-dropdown
                    :choices [{:id :name :label "Name"}

@@ -37,13 +37,13 @@ return null;
 mranderson047.re_frame.v0v10v2.re_frame.trace.next_id = (function mranderson047$re_frame$v0v10v2$re_frame$trace$next_id(){
 return cljs.core.swap_BANG_.call(null,mranderson047.re_frame.v0v10v2.re_frame.trace.id,cljs.core.inc);
 });
-mranderson047.re_frame.v0v10v2.re_frame.trace.start_trace = (function mranderson047$re_frame$v0v10v2$re_frame$trace$start_trace(p__41602){
-var map__41603 = p__41602;
-var map__41603__$1 = ((((!((map__41603 == null)))?((((map__41603.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41603.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__41603):map__41603);
-var operation = cljs.core.get.call(null,map__41603__$1,new cljs.core.Keyword(null,"operation","operation",-1267664310));
-var op_type = cljs.core.get.call(null,map__41603__$1,new cljs.core.Keyword(null,"op-type","op-type",-1636141668));
-var tags = cljs.core.get.call(null,map__41603__$1,new cljs.core.Keyword(null,"tags","tags",1771418977));
-var child_of = cljs.core.get.call(null,map__41603__$1,new cljs.core.Keyword(null,"child-of","child-of",-903376662));
+mranderson047.re_frame.v0v10v2.re_frame.trace.start_trace = (function mranderson047$re_frame$v0v10v2$re_frame$trace$start_trace(p__41626){
+var map__41627 = p__41626;
+var map__41627__$1 = ((((!((map__41627 == null)))?((((map__41627.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__41627.cljs$core$ISeq$)))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__41627):map__41627);
+var operation = cljs.core.get.call(null,map__41627__$1,new cljs.core.Keyword(null,"operation","operation",-1267664310));
+var op_type = cljs.core.get.call(null,map__41627__$1,new cljs.core.Keyword(null,"op-type","op-type",-1636141668));
+var tags = cljs.core.get.call(null,map__41627__$1,new cljs.core.Keyword(null,"tags","tags",1771418977));
+var child_of = cljs.core.get.call(null,map__41627__$1,new cljs.core.Keyword(null,"child-of","child-of",-903376662));
 return new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"id","id",-1388402092),mranderson047.re_frame.v0v10v2.re_frame.trace.next_id.call(null),new cljs.core.Keyword(null,"operation","operation",-1267664310),operation,new cljs.core.Keyword(null,"op-type","op-type",-1636141668),op_type,new cljs.core.Keyword(null,"tags","tags",1771418977),tags,new cljs.core.Keyword(null,"child-of","child-of",-903376662),(function (){var or__27195__auto__ = child_of;
 if(cljs.core.truth_(or__27195__auto__)){
 return or__27195__auto__;
@@ -53,4 +53,4 @@ return new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$a
 })(),new cljs.core.Keyword(null,"start","start",-355208981),mranderson047.re_frame.v0v10v2.re_frame.interop.now.call(null)], null);
 });
 
-//# sourceMappingURL=trace.js.map?rel=1514003844618
+//# sourceMappingURL=trace.js.map?rel=1514349644497
