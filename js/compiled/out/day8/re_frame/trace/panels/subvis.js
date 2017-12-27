@@ -53,8 +53,8 @@ var svg = cljs.core.reset_BANG_.call(null,svg_a,d3.select("#d3cmp"));
 cljs.core.reset_BANG_.call(null,color_a,d3.scaleOrdinal(d3.schemeCategory20));
 
 cljs.core.reset_BANG_.call(null,simulation_a,d3.forceSimulation().force("link",d3.forceLink().id(((function (svg,color_a,svg_a,simulation_a){
-return (function (p1__42772_SHARP_){
-return p1__42772_SHARP_.id;
+return (function (p1__42796_SHARP_){
+return p1__42796_SHARP_.id;
 });})(svg,color_a,svg_a,simulation_a))
 ).distance(cljs.core.constantly.call(null,(100)))).force("charge",d3.forceManyBody().strength(cljs.core.constantly.call(null,(-100)))).force("center",d3.forceCenter((day8.re_frame.trace.panels.subvis.width / (2)),(day8.re_frame.trace.panels.subvis.height / (2)))));
 
@@ -102,8 +102,8 @@ return d.fy = null;
 });})(simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,old_g,graph,color_a,svg_a,simulation_a))
 ;
 var link = svg.select("g.links").selectAll("line").data(links,((function (simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,drag_ended,old_g,graph,color_a,svg_a,simulation_a){
-return (function (p1__42773_SHARP_){
-return p1__42773_SHARP_.id;
+return (function (p1__42797_SHARP_){
+return p1__42797_SHARP_.id;
 });})(simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,drag_ended,old_g,graph,color_a,svg_a,simulation_a))
 );
 var enter_link = link.enter().append("line").attr("stroke-width",((function (simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,drag_ended,link,old_g,graph,color_a,svg_a,simulation_a){
@@ -114,8 +114,8 @@ return Math.sqrt(d.value);
 var merged_link = enter_link.merge(link);
 var _ = link.exit().remove("line");
 var node = svg.select("g.nodes").selectAll(".node").data(nodes,((function (simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,drag_ended,link,enter_link,merged_link,_,old_g,graph,color_a,svg_a,simulation_a){
-return (function (p1__42774_SHARP_){
-return p1__42774_SHARP_.id;
+return (function (p1__42798_SHARP_){
+return p1__42798_SHARP_.id;
 });})(simulation,color,svg,graph__$1,nodes,links,drag_started,dragged,drag_ended,link,enter_link,merged_link,_,old_g,graph,color_a,svg_a,simulation_a))
 );
 var enter_node = node.enter().append("g").attr("class","node").call(d3.drag().on("start",drag_started).on("drag",dragged).on("end",drag_ended));
@@ -216,4 +216,4 @@ return null;
 ;})(color_a,svg_a,simulation_a))
 });
 
-//# sourceMappingURL=subvis.js.map?rel=1514003846886
+//# sourceMappingURL=subvis.js.map?rel=1514349648181
