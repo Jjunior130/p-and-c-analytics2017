@@ -26,6 +26,7 @@
                   :child
                   ((comp str count)
                    grouped-units)]
+                 [rc/box :child "Sort-by:"]
                  [rc/box
                   :child
                   [rc/single-dropdown
